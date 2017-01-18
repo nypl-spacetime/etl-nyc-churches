@@ -1,0 +1,27 @@
+{
+  "name": "spacetime-etl-nyc-churches",
+  "version": "1.0.0",
+  "description": "Churches in New York City, 1790 to 1856 — from Evangelical Gotham: Religion and the Making of New York City by Kyle Roberts",
+  "main": "nyc-churches.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "spacetime-generate-etl-readme": "~0.0.7",
+    "standard": "^8.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nypl-spacetime/etl-nyc-churches.git"
+  },
+  "scripts": {
+    "test": "standard",
+    "readme": "spacetime-generate-etl-readme ./ -o README.md"
+  },
+  "author": "Bert Spaan",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parser": "^1.11.0",
+    "highland": "^2.10.1"
+  }
+}
