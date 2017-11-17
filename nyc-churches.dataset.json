@@ -3,6 +3,61 @@
   "title": "Churches in New York City, 1790 to 1856",
   "license": "CC BY 3.0",
   "description": "Churches in New York City, 1790 to 1856 - from Evangelical Gotham: Religion and the Making of New York City",
-  "author": "Kyle Roberts <kroberts2@luc.edu>",
-  "website": "http://press.uchicago.edu/ucp/books/book/chicago/E/bo24204663.html"
+  "homepage": "http://press.uchicago.edu/ucp/books/book/chicago/E/bo24204663.html",
+  "sources": [
+    {
+      "title": "Map Warper layers",
+      "path": "https://github.com/nypl-spacetime/etl-nyc-churches/nyc-churches-1790-1856"
+    }
+  ],
+  "contributors": [
+    {
+      "author": "Kyle Roberts <kroberts2@luc.edu>",
+      "role": "author"
+    },
+    {
+      "title": "Bert Spaan",
+      "role": "editor"
+    }
+  ],
+  "fields": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "evangelical",
+      "type",
+      "typeKey"
+    ],
+    "properties": {
+      "evangelical": {
+        "type": "boolean",
+        "description": "Evangelical: yes/no"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of church"
+      },
+      "denomination": {
+        "type": "string",
+        "description": "Denomination of church"
+      },
+      "longName": {
+        "type": "string",
+        "description": "Long title"
+      },
+      "type": {
+        "type": "string",
+        "description": "Type of church"
+      },
+      "typeKey": {
+        "type": "string",
+        "description": "Type abbriviation, used on maps in book"
+      },
+      "yearBuilt": {
+        "type": "integer",
+        "description": "Year of construction"
+      }
+    }
+  }
 }

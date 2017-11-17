@@ -31,7 +31,7 @@ function parseHtml (html) {
   const keys = {
     'Denomination:': 'denomination',
     'Date Founded/Built:': 'yearBuilt',
-    'name:': 'name',
+    'name:': 'longName',
     'description:': 'description'
   }
 
@@ -84,7 +84,7 @@ function transform (config, dirs, tools, callback) {
   const csvDir = path.join(__dirname, 'nyc-churches-1790-1856')
   const readFile = H.wrapCallback(fs.readFile)
 
-  var rows = H(fs.readdirSync(csvDir))
+  const rows = H(fs.readdirSync(csvDir))
     .filter((filename) => path.extname(filename) === '.csv')
     .map((filename) => path.join(csvDir, filename))
     .map(readFile)
@@ -104,12 +104,13 @@ function transform (config, dirs, tools, callback) {
       ]
     }))
 
-  var id = 0
+  let id = 0
 
   H(rows)
+    .filter((row) => row.type)
     .map((row) => {
-      var title
-      var periodStr
+      let title
+      let periodStr
 
       if (row.titlePeriod) {
         [title, periodStr] = row.titlePeriod.split(',')
@@ -118,11 +119,13 @@ function transform (config, dirs, tools, callback) {
       const period = parsePeriod(periodStr)
       const data = parseHtml(row.html)
 
+      const typeKey = row.type.trim()
+
       return Object.assign(row, {
         title,
         // year,
-        typeKey: row.type,
-        type: types[row.type],
+        typeKey,
+        type: types[typeKey],
         evangelical: row.evangelical === 'Evangelical',
         lon: parseFloat(row.lon),
         lat: parseFloat(row.lat)
