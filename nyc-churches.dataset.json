@@ -12,15 +12,15 @@
   ],
   "contributors": [
     {
-      "author": "Kyle Roberts <kroberts2@luc.edu>",
+      "title": "Kyle Roberts <kroberts2@luc.edu>",
       "role": "author"
     },
     {
       "title": "Bert Spaan",
-      "role": "editor"
+      "role": "wrangler"
     }
   ],
-  "fields": {
+  "schema": {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
     "additionalProperties": false,
