@@ -6,13 +6,14 @@
   "homepage": "http://press.uchicago.edu/ucp/books/book/chicago/E/bo24204663.html",
   "sources": [
     {
-      "title": "Map Warper layers",
+      "title": "Data from Evangelical Gotham: Religion and the Making of New York City",
       "path": "https://github.com/nypl-spacetime/etl-nyc-churches/nyc-churches-1790-1856"
     }
   ],
   "contributors": [
     {
-      "title": "Kyle Roberts <kroberts2@luc.edu>",
+      "title": "Kyle Roberts",
+      "email": "kroberts2@luc.edu",
       "role": "author"
     },
     {
