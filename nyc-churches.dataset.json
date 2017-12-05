@@ -21,6 +21,15 @@
       "role": "wrangler"
     }
   ],
+  "flattenPaths": [
+    "$.data.evangelical",
+    "$.data.description",
+    "$.data.denomination",
+    "$.data.longName",
+    "$.data.type",
+    "$.data.typeKey",
+    "$.data.yearBuilt"
+  ],
   "schema": {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",

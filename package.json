@@ -1,6 +1,6 @@
 {
   "name": "spacetime-etl-nyc-churches",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Churches in New York City, 1790 to 1856 — from Evangelical Gotham: Religion and the Making of New York City by Kyle Roberts",
   "main": "nyc-churches.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "csv-parser": "^1.11.0",
-    "highland": "^2.10.1",
-    "ramda": "^0.23.0"
+    "highland": "^2.11.1",
+    "ramda": "^0.25.0"
   }
 }
